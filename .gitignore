@@ -50,6 +50,9 @@ coverage.xml
 # Local
 .local
 
+# AWS cert
+.aws
+
 # Kaggle
 .kaggle
 
