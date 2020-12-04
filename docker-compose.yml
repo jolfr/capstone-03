@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    environment:
+      - KAGGLE_USERNAME=jackcarroll248
+      - KAGGLE_KEY=9cfac6d33b9fd0a70a057384e75a9385
