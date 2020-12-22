@@ -1,5 +1,5 @@
 # Start from a core stack version
-FROM jupyter/pyspark-notebook:latest
+FROM jupyter/allspark-notebook:latest
 # Install from requirements.txt file
 COPY --chown=${NB_UID}:${NB_GID} requirements.txt /tmp/
 RUN mkdir -p /home/jovyan/.kaggle
