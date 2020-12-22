@@ -50,9 +50,6 @@ coverage.xml
 # Local
 .local
 
-# markdown files
-*.md
-
 # AWS cert
 .aws
 
