@@ -17,9 +17,11 @@ for entry in os.scandir(notebookDir):
                 c = Config()
                 c.FilesWriter.build_directory = outputDir
                 fw = FilesWriter(config=c)
-                section = entry.name.replace(r'^\d', '').replace('-', '').replace('_', ' ')
+                section = entry.name.replace(r'\d', '').replace('-', ' ').replace('_', ' ')
                 section = 'section : "' + section + '"\n'
-                title = notebook.name.replace('/.ipynb', '')
+                title = notebook.name.replace('.ipynb', '').replace('-', ' ').replace('_', ' ')
                 title = 'title: "' + title + '"\n'
                 header = '---\n' + section + title + '---\n'
                 fw.write(header + output, resource, notebook_name=notebook.name)
+            elif notebook.name == 'README.md':
+                print('README: ' + notebook.name)
