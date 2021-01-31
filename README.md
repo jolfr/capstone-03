@@ -1,7 +1,8 @@
-capstone-03
+Predicting Customer Churn in Distributed Spark Cluster
 ==============================
 
-A short description of the project.
+This capstone project for Springboard Learning attempts to predict whether a customer will churn in the subsequent month,
+based upon behavior in the current month.
 
 Project Organization
 ------------
