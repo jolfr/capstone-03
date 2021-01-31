@@ -55,4 +55,32 @@ Project Organization
 
 --------
 
+The Dataset
+--------
+The dataset was acquired from [KKBox's Churn Prediction Challenge](https://www.kaggle.com/c/kkbox-churn-prediction-challenge).
+
+Data Cleaning
+--------
+Each of the relational tables were cleaned and checked for parity along the user id before running feature synthesis. 
+Features were then cleaned before preprocessing work.
+
+Feature Selection
+-------
+Based upon correlation to the label, the top 20 features were selected. This process also filters out collinear columns, 
+with a correlation above 0.90 rejected.
+
+Preprocessing
+--------
+Data was split into two subsets for training and validation, with an 80/20 split. 
+A random split would lead to data leakage, so a time based split was used. The subsets
+were then downsampled to reduce training time.
+
+Model Pipeline
+--------
+The model pipeline consists of a feature selector, which one-hot-encodes the categorical 
+variables and then condenses the features into a single feature vector, and a standard scaler, which 
+scales the continuous variables. These two steps are chained in front of the various models trained.
+
+
+
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
